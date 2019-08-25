@@ -148,6 +148,12 @@ body {
 
 @media only screen and (max-width: 992px) {
   .header-menu-burger {
+    margin-right: 20px; }
+  .header-menu-nav a {
+    margin-left: 20px; } }
+
+@media only screen and (max-width: 768px) {
+  .header-menu-burger {
     margin-right: 10px; }
   .header-menu-nav {
     display: none;
@@ -178,7 +184,12 @@ body {
 @media only screen and (max-width: 576px) {
   .header-menu-nav {
     width: 100%;
-    max-width: 100%; } }
+    max-width: 100%; }
+  .header-info li:nth-child(2) {
+    padding-left: 0;
+    padding-right: 0; }
+  .header-info li > span {
+    padding: 10px 14px; } }
 
 .main {
   display: -webkit-box;
