@@ -66,16 +66,21 @@ $(document).ready(function(){
               minlength: "Name must be at least 1 character",
               maxlength: "The maximum number of characters is 50",
             },
-          mail:{
-            required: "This field is required",
-            minlength: "Login must be at least 4 characters",
-            maxlength: "The maximum number of characters is 100",
-        },
+            mail:{
+              required: "This field is required",
+              minlength: "Login must be at least 4 characters",
+              maxlength: "The maximum number of characters is 100",
+          },
           question:{
             required: "This field is required",
             minlength: "Question must be at least 10 characters",
             maxlength: "The maximum number of characters is 1000", 
           },
+        },
+        submitHandler: function (form) {
+          $(".popup-form-btn").attr("disabled", true);
+          $(".thank-you-message").css("display", "block");
+          $(".popup-form")[0].reset();
         }
      });
 
@@ -93,7 +98,12 @@ $(document).ready(function(){
             required: "This field is required",
             minlength: "Login must be at least 4 characters",
             maxlength: "The maximum number of characters is 100",
+          },
         },
+        submitHandler: function (form) {
+          $(".form-btn").attr("disabled", true);
+          $(".thank-you-message").css("display", "block");
+          $(".form")[0].reset();
         }
      });
     

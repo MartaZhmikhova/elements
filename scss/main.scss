@@ -87,3 +87,11 @@ body {
         line-height: 40px;
     }
 }
+.thank-you-message {
+    text-align: center;
+    margin-top: 20px;
+    color: $text;
+    font-size: 14px;
+    font-weight: 600;
+    display: none;
+}

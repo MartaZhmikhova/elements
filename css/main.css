@@ -848,4 +848,12 @@ body {
     font-size: 30px;
     line-height: 40px; } }
 
+.thank-you-message {
+  text-align: center;
+  margin-top: 20px;
+  color: #475055;
+  font-size: 14px;
+  font-weight: 600;
+  display: none; }
+
 /*# sourceMappingURL=main.css.map */
