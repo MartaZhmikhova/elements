@@ -1,0 +1,45 @@
+@import "var", "mixin";
+
+/* Form */
+.popup{
+    background: rgba(7, 1, 35, 0.5);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    display: none;
+    
+    &-box{
+        width: 100%;
+        @include width(300px);
+        background: $white;
+        padding: 20px;
+        position: absolute;
+        top: -300px;
+        left: 50%;
+        transition: 0.5s ease;
+
+        &-animate{
+            top: 50%;
+            transform: translate(-50%,-50%);   
+        }
+    }
+    &-form{
+        &-input{
+            @extend .form-input;
+            margin-top: 20px;
+        }
+        &-textarea{
+            margin-top: 20px;
+            @extend .form-input;
+        }
+        &-btn{
+            @extend .form-btn;
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    }
+}

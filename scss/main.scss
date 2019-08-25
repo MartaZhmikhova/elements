@@ -1,0 +1,89 @@
+
+@import "reset", "var";
+
+*::-webkit-input-placeholder {
+    color: $placeholder;
+    opacity: 1; }
+  
+  *:-moz-placeholder {
+    color: $placeholder;
+    opacity: 1; }
+  
+  *::-moz-placeholder {
+    color: $placeholder;
+    opacity: 1; }
+  
+  *:-ms-input-placeholder {
+    color: $placeholder;
+    opacity: 1; }
+    
+/* General */
+
+body {
+    font: 16px/24px $font, sans-serif;
+    font-weight: 400;
+    color: $text;
+    background: $bgBody;
+    padding: 100px 0;
+    position: relative;
+}
+.container{
+    max-width: 956px;
+    margin: 0 auto;
+    padding: 0 14px;
+}
+
+@import "header";
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 14px;
+}
+.h4{
+    font: 24px/28px $font;
+    color: $text;
+}
+.h2{
+    font: 46px/68px $font;
+    font-weight: 300;
+}
+.subtitle{
+    font: 15px/28px $font;
+    font-weight: 300;
+    color: $text;
+
+    &_second{
+        font: 12px/28px $font;
+        color: $text;
+        padding-top: 6px;
+    }
+}
+
+@import "mainMenu", "mainNetworks", "slider", "popup";
+.error{
+    color: red;
+    display: block;
+    font-size: 12px;
+}
+
+@media only screen and (max-width: 768px){
+    .h4{
+        font-size: 20px;
+    }
+    .subtitle{
+        line-height: 22px;
+        &_second{
+            line-height: 18px;
+        }
+    }
+}
+@media only screen and (max-width: 576px){
+    body{
+        padding: 50px 0;
+    }
+    .h2{
+        font-size: 30px;
+        line-height: 40px;
+    }
+}

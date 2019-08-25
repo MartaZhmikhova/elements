@@ -1,0 +1,140 @@
+@import "var", "mixin";
+
+/* Featured story */
+.slider{
+    margin-top: 56px;
+    max-width: 100%;
+
+    .slider-slide{
+        min-height: 450px;
+    }
+
+    &-slide{
+        position: relative;
+        color: #fff;
+        padding: 10px 60px 30px;
+
+        &-bg{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 0;
+            filter: brightness(40%);
+            background: #787878;
+
+            &-img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+        &-info{
+            position: relative;
+            z-index: 3;
+            &-text{
+                font: 14px/24px $font;
+                font-weight: 100;
+                margin-top: 20px;
+                max-width: 330px;
+            }
+            &-btn{
+                font: 16px/18px $font;
+                font-weight: 500;
+                text-transform: uppercase;
+                display: inline-block;
+                padding: 16px 40px;
+                margin-top: 30px;
+                border: 1px solid $white;
+                border-radius: 2px;
+                text-align: center;
+                color: $white;
+                @include transition;
+
+                &:hover{
+                    background: $white;
+                    color: #585858;
+                    cursor: pointer;
+                } 
+            }
+        }
+    }
+    .slick-arrow{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        z-index: 3;
+        display: inline-block;
+        padding: 18px 12px;
+        font-size: 14px;
+        line-height: 14px;
+        background: $white;
+        color: #585858;
+        border-radius: 2px;  
+        @include transition;
+        &:hover{
+            background: $accent;
+            cursor: pointer;
+        }     
+    }
+    .icon-arrow-right{
+        left: auto;
+        right: 0;
+    }
+    .slick-dots{
+        position: absolute;
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;
+        display: flex;
+
+        .slick-active{
+            button{
+                background: $white;
+            }
+        }
+
+        button{
+            border: 1px solid $white;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 4px;
+            background: transparent;
+            font-size: 0;
+            line-height: 0;
+            @include transition;
+
+            &:hover{
+                background: $white;
+                cursor: pointer;
+            }
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 576px){
+    .slider{
+        &-slide{
+            padding: 10px 30px 40px;
+            &-info{
+                &-text{
+                    max-width: 100%;
+                }
+            }
+        }
+        
+        .slick-dots{
+            bottom: 20px;
+        }
+        .slick-arrow{
+            padding-left: 6px;
+            padding-right: 6px;
+        }
+    }
+}
